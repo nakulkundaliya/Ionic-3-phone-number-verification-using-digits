@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin
+  id="cordova-plugin-digits" version="1.1.2"
+  xmlns="http://cordova.apache.org/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <name>Digits</name>
+  <description>Digits.com for Cordova (iOS and Android)</description>
+  <author>Edmond Leung (Jimmy Makes Things)</author>
+  <license>MIT</license>
+  <keywords>cordova,digits.com,digits,fabric.io,fabric</keywords>
+  <repo>https://github.com/JimmyMakesThings/cordova-plugin-digits</repo>
+  <issue>hello@jimmymakesthings.com</issue>
+
+  <preference name="FABRIC_API_KEY" />
+  <preference name="FABRIC_CONSUMER_KEY" />
+  <preference name="FABRIC_CONSUMER_SECRET" />
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+
+  <js-module src="www/digits.js" name="Digits">
+    <clobbers target="window.plugins.digits" />
+  </js-module>
+
+  <platform name="android">
+    <framework src="src/android/digits.gradle" custom="true" type="gradleReference" />
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Digits" >
+        <param name="android-package" value="com.jimmymakesthings.plugins.digits.CordovaDigits" />
+      </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <preference name="android-minSdkVersion" value="10" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+      <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <meta-data android:name="com.crashlytics.ApiKey" android:value="$FABRIC_API_KEY" />
+      <meta-data android:name="io.fabric.ApiKey" android:value="$FABRIC_API_KEY" />
+      <meta-data android:name="io.fabric.ConsumerKey" android:value="$FABRIC_CONSUMER_KEY" />
+      <meta-data android:name="io.fabric.ConsumerSecret" android:value="$FABRIC_CONSUMER_SECRET" />
+    </config-file>
+
+    <source-file src="src/android/CordovaDigits.java" target-dir="src/com/jimmymakesthings/plugins/digits" />
+  </platform>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="Digits">
+        <param name="ios-package" value="CDVDigits" />
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/CDVDigits.h" />
+    <source-file src="src/ios/CDVDigits.m" />
+
+    <config-file target="*-Info.plist" parent="Fabric">
+      <dict>
+        <key>APIKey</key>
+        <string>$FABRIC_API_KEY</string>
+        <key>Kits</key>
+        <array>
+          <dict>
+            <key>KitInfo</key>
+            <dict>
+              <key>consumerKey</key>
+              <string>$FABRIC_CONSUMER_KEY</string>
+              <key>consumerSecret</key>
+              <string>$FABRIC_CONSUMER_SECRET</string>
+            </dict>
+            <key>KitName</key>
+            <string>Digits</string>
+          </dict>
+          <dict>
+            <key>KitInfo</key>
+            <dict>
+              <key>consumerKey</key>
+              <string>$FABRIC_CONSUMER_KEY</string>
+              <key>consumerSecret</key>
+              <string>$FABRIC_CONSUMER_SECRET</string>
+            </dict>
+            <key>KitName</key>
+            <string>Crashlytics</string>
+          </dict>
+        </array>
+      </dict>
+    </config-file>
+
+    <framework src="src/ios/Crashlytics.framework" custom="true" />
+    <framework src="src/ios/DigitsKit.framework" custom="true" />
+    <framework src="src/ios/Fabric.framework" custom="true" />
+    <framework src="src/ios/TwitterCore.framework" custom="true" />
+
+    <framework src="Accounts.framework" weak="true" />
+    <framework src="AddressBook.framework" weak="true" />
+    <framework src="CoreData.framework" weak="true" />
+    <framework src="Foundation.framework" weak="true" />
+    <framework src="QuartzCore.framework" weak="true" />
+    <framework src="Security.framework" weak="true" />
+    <framework src="Social.framework" weak="true" />
+
+    <resource-file src="src/ios/DigitsKit.framework/Versions/A/Resources/DigitsKitResources.bundle" />
+  </platform>
+
+</plugin>

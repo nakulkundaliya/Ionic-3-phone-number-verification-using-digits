@@ -1,0 +1,92 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-digits",
+        "scope": null,
+        "escapedName": "cordova-plugin-digits",
+        "name": "cordova-plugin-digits",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/Nakul.Kundaliya/Documents/DemoProjects/BlogDemo/MobileNumberVerify/node_modules"
+    ]
+  ],
+  "_from": "cordova-plugin-digits@latest",
+  "_id": "cordova-plugin-digits@1.1.2",
+  "_inCache": true,
+  "_location": "/cordova-plugin-digits",
+  "_nodeVersion": "4.2.0",
+  "_npmUser": {
+    "name": "eleung",
+    "email": "leung.edmond@gmail.com"
+  },
+  "_npmVersion": "2.14.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-digits",
+    "scope": null,
+    "escapedName": "cordova-plugin-digits",
+    "name": "cordova-plugin-digits",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-digits/-/cordova-plugin-digits-1.1.2.tgz",
+  "_shasum": "eb889cfeb09cdacc9c193f385e00ed7c2fa088f9",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-digits",
+  "_where": "/Users/Nakul.Kundaliya/Documents/DemoProjects/BlogDemo/MobileNumberVerify/node_modules",
+  "author": {
+    "name": "Edmond Leung",
+    "url": "Jimmy Makes Things"
+  },
+  "bugs": {
+    "url": "https://github.com/JimmyMakesThings/cordova-plugin-digits/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-digits",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "Digits.com for Cordova (iOS and Android)",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "eb889cfeb09cdacc9c193f385e00ed7c2fa088f9",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-digits/-/cordova-plugin-digits-1.1.2.tgz"
+  },
+  "gitHead": "39d0e1e646340663fba10bfb4bacec3b2bb40f60",
+  "homepage": "https://github.com/JimmyMakesThings/cordova-plugin-digits#readme",
+  "keywords": [
+    "cordova",
+    "digits.com",
+    "digits",
+    "fabric.io",
+    "fabric"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "eleung",
+      "email": "leung.edmond@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-digits",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimmyMakesThings/cordova-plugin-digits.git"
+  },
+  "scripts": {},
+  "version": "1.1.2"
+}
