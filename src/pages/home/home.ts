@@ -13,13 +13,13 @@ export class HomePage {
 
   mobileNumberVerify(){
      const options = {
-      accentColor: '#ff0000',
+      accentColor: '#dfdfdf',
       backgroundColor: '#ffffff',
       };
 
       window.plugins.digits.authenticate(options,
       (oAuthHeaders) => {
-        alert("Your mobile number is verification successfully")
+        alert("Your mobile number "+oAuthHeaders.phoneNumber+" is verification successfully")
         console.log("success",oAuthHeaders);
       },
       (error) => {
