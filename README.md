@@ -4,22 +4,18 @@ This README would normally document whatever steps are necessary to get your app
 
 ### Ionic and Cordova Installation  ###
 ```
-#!cli
-
 $ sudo npm install -g ionic cordova
 ```
 
 ### Create New project  ###
 
 ```
-#!cli
 $ ionic start MobileNumberVerify
 ```
 ### Add platform  ###
 
 Add Ios and android platform in project
 ```
-#!cli
 $ ionic cordova platform add android
 $ ionic cordova platform add ios
 ```
