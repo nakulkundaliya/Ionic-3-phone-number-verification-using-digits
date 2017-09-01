@@ -19,6 +19,12 @@ Add Ios and android platform in project
 $ ionic cordova platform add android
 $ ionic cordova platform add ios
 ```
+
+# Demo View #
+
+![alt text](https://github.com/nakulkundaliya/Ionic-3-phone-number-verification-using-digits/tree/master/src/assets/ios.gif)
+
+
 ### Add cordova-plugin-digits plugin ###
 ```
 #!cli
